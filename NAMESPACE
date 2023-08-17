@@ -2,7 +2,7 @@
 
 importFrom(R6, R6Class)
 importFrom(dplyr, filter)
-importFrom(dplyr, %>%)
+importFrom(magrittr, "%>%")
 importFrom(tibble, add_column)
 
 export(TEBase)
