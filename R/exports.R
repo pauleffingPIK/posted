@@ -25,10 +25,10 @@ flowTypes <- flowTypes
 #' @export defaultMasks
 defaultMasks <- defaultMasks
 
-pathOfFile <- pathOfFile
-pathOfTEDFile <- pathOfTEDFile
-pathOfDataFile <- pathOfDataFile
-pathOfOutputFile <- pathOfOutputFile
+#pathOfFile <- pathOfFile
+#pathOfTEDFile <- pathOfTEDFile
+#pathOfDataFile <- pathOfDataFile
+#pathOfOutputFile <- pathOfOutputFile
 
 readCSVDataFile <- readCSVDataFile
 readYAMLDataFile <- readYAMLDataFile
