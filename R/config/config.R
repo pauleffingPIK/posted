@@ -1,5 +1,4 @@
 source("R/config/read_config.R")
-source("R/path.R")
 
 testi <- function (){
     print("hello")
