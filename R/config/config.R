@@ -1,4 +1,4 @@
-#source("R/config/read_config.R")
+source("R/config/read_config.R")
 
 testi <- function (){
     print("hello")
