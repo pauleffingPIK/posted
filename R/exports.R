@@ -24,3 +24,9 @@ mapColnamesDtypes <- mapColnamesDtypes
 flowTypes <- flowTypes
 #' @export defaultMasks
 defaultMasks <- defaultMasks
+
+pathOfFile <- pathOfFile
+pathOfTEDFile <- pathOfTEDFile
+pathOfDataFile <- pathOfDataFile
+pathOfOutputFile <- pathOfOutputFile
+
