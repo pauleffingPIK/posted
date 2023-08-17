@@ -5,6 +5,7 @@ importFrom(dplyr, filter)
 importFrom(usethis, use_pipe)
 importFrom(magrittr,"%>%")
 importFrom(tibble, add_column)
+export("%>%")
 
 export(TEBase)
 export(TEDataFile)
