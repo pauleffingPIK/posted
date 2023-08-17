@@ -30,6 +30,6 @@ defaultMasks <- defaultMasks
 #pathOfDataFile <- pathOfDataFile
 #pathOfOutputFile <- pathOfOutputFile
 
-readCSVDataFile <- readCSVDataFile
-readYAMLDataFile <- readYAMLDataFile
+#readCSVDataFile <- readCSVDataFile
+#readYAMLDataFile <- readYAMLDataFile
 
