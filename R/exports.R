@@ -30,3 +30,6 @@ pathOfTEDFile <- pathOfTEDFile
 pathOfDataFile <- pathOfDataFile
 pathOfOutputFile <- pathOfOutputFile
 
+readCSVDataFile <- readCSVDataFile
+readYAMLDataFile <- readYAMLDataFile
+
