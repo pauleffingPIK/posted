@@ -1,5 +1,7 @@
 library(R6)
 
+source("R/units/units.py")
+source("R/path.R")
 source("R/config/config.R")
 source("R/ted/TEBase.R")
 source("R/ted/TEDataFile.R")
