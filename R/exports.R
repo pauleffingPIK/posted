@@ -10,3 +10,17 @@ TEBase <- TEBase
 TEDataFile <- TEDataFile
 #' @export TEDataSet
 TEDataSet <- TEDataSet
+
+defaultUnits <- defaultUnits
+
+techClasses  <- techClasses
+
+techs  <- techs
+
+baseFormat <- baseFormat
+
+mapColnamesDtypes  <- mapColnamesDtypes
+
+flowTypes <- flowTypes
+
+defaultMasks <- defaultMasks
