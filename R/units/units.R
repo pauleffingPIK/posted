@@ -23,10 +23,10 @@ convUnit <- function(unit_from, unit_to, flow_type=NULL) {
     if (is.null(flow_type)) {
         values <- filter(cachedUnits, from==unit_from & to==unit_to)
     } else {
-        values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
+        values <- filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
         # if there was no match, try again without flow_type
         if (nrow(values) == 0) {
-            values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to)
+            values <- filter(cachedUnits, from==unit_from & to==unit_to)
         }
     }
 
