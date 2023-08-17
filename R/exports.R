@@ -35,3 +35,4 @@ readYAMLDataFile <- readYAMLDataFile
 
 convUnit <- convUnit
 convUnitDF <- convUnitDF
+cachedUnits <- cachedUnits
