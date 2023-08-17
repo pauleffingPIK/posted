@@ -2,6 +2,7 @@
 
 importFrom(R6, R6Class)
 importFrom(dplyr, filter)
+importFrom(usethis, use_pipe)
 importFrom(magrittr,"%>%")
 importFrom(tibble, add_column)
 
