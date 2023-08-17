@@ -1,5 +1,8 @@
 #source("R/config/read_config.R")
 
+testi <- function (){
+    print("hello")
+}
 
 # load options
 defaultUnits <- readYAMLDataFile('default_units')
