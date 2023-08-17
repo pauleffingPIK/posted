@@ -115,9 +115,9 @@ TEDataSet <- R6Class("TEDataSet",
                 convUnitDF(private$df[!is.na(private$df["reference_unit"]), ], 'reference_unit', 'reference_unit_default', self$refFlow())
 
             # set converted value and unit
-            private$df <- tibble::add_column(private$df, value=private$df$reported_value / private$df$reference_value / private$df$reference_unit_factor, .after=colnames(private$df)[7])
-            private$df <- tibble::add_column(private$df, unc=private$df$reported_unc / private$df$reference_value / private$df$reference_unit_factor, .after='value')
-            private$df <- tibble::add_column(private$df, unit=private$df$reported_unit, .after='unc')
+            private$df <- add_column(private$df, value=private$df$reported_value / private$df$reference_value / private$df$reference_unit_factor, .after=colnames(private$df)[7])
+            private$df <- add_column(private$df, unc=private$df$reported_unc / private$df$reference_value / private$df$reference_unit_factor, .after='value')
+            private$df <- add_column(private$df, unit=private$df$reported_unit, .after='unc')
 
             # drop old unit and value columns
             private$df <- private$df[, -grep("^(reported|reference)_(value|unc|unit).*$", colnames(private$df))]
