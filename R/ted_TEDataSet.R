@@ -7,6 +7,19 @@ source("R/path.R")
 source("R/ted_TEDataFile.R")
 source("R/units_units.R")
 
+#' The class that implements a fully usable TE data set.
+#' 
+#' @description This class implements a fully usable TE data set.
+#' It enables to generate aggregated tables to analize the underlying data.
+#' 
+#' @field tid The technology ID.
+#' @field load_other Other data files to load.
+#' @field load_database Whether to load the default data file from the POSTED database.
+#' @field check_incons Whether to check for inconsistencies in the data.
+#' @field df The data frame.
+#' @field refUnits The reference units.
+#' @field repUnits The reported units.
+#' @export TEDataSet
 TEDataSet <- R6Class("TEDataSet",
     inherit = TEBase,
     private = list(
@@ -203,6 +216,13 @@ TEDataSet <- R6Class("TEDataSet",
         }
     ),
     public = list( 
+        #' @description
+        #' Create a TEDataSet object.
+        #' @param tid The technology ID.
+        #' @param data The data frame.
+        #' @param load_other Other data files to load.
+        #' @param load_database Whether to load the default data file from the POSTED database.
+        #' @param check_incons Whether to check for inconsistencies in the data.
         initialize = function(tid, data = NULL, load_other=list(), load_database=FALSE, check_incons=FALSE) {
             # initialise TEBase fields
             super$initialize(tid)
@@ -223,10 +243,16 @@ TEDataSet <- R6Class("TEDataSet",
                 private$adjustUnits()
             }
         },
+        #' @description
+        #' Get the data frame.
+        #' @return The data frame.
         data = function() {
             private$df
         },
-        # get reported unit for entry type
+        #' @description
+        #' Get the reported unit of an entry type.
+        #' @param typeid The entry type ID.
+        #' @param flowid The flow type ID. NULL if not applicable.
         getRepUnit = function(typeid, flowid = NULL) {
             if (is.null(flowid)) {
                 filtered <- private$repUnits[private$repUnits$type == typeid]
@@ -236,10 +262,16 @@ TEDataSet <- R6Class("TEDataSet",
                 return(filtered[[1]]$unit)
             }
         },
-        # get reference unit for entry type
+        #' @description
+        #' Get the reference unit of an entry type.
+        #' @param typeid The entry type ID.
+        #' @param flowid The flow type ID. NULL if not applicable.
         getRefUnit = function(typeid, flowid = NULL) {
             private$refUnits[[typeid]]
         },
+        #' @description
+        #' Query the data frame
+        #' @param ... The query parameters.
         query = function(...) {
             TEDataSet$new(
                 tid=private$tid,

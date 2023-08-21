@@ -1,9 +1,5 @@
 source("R/config_read_config.R")
 
-testi <- function (){
-    print("hello")
-}
-
 # load options
 defaultUnits <- readYAMLDataFile('default_units')
 names(defaultUnits) <- paste0("[", names(defaultUnits), "]")
@@ -28,23 +24,6 @@ for (i in seq_len(length(techs))) {
         }
         techs[[i]]$case_fields <- caseFields
     }
-#}
-#for (tspecs in techs) {
-#    techClass <- techClasses[[tspecs$class]]
-#    tspecs$entry_types <- techClass$entry_types
-#
-#    if (!('case_fields' %in% tspecs)) {
-#        tspecs$case_fields <- list()
-#    } else {
-#        caseFields <- list()
-#        for (caseType in names(tspecs$case_fields)) {
-#            caseFields[[caseType]] <- techClass$case_fields[[caseType]]
-#            caseFields[[caseType]]$dtype <- 'category'
-#            caseFields[[caseType]]$required <- FALSE
-#            caseFields[[caseType]]$options <- tspecs$case_fields[[caseType]]
-#        }
-#        tspecs$case_fields <- caseFields
-#    }   
 }
 # read data format and dtypes
 baseFormat <- readYAMLDataFile('base_format')

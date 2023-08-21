@@ -1,6 +1,16 @@
 library("R6")
 source("R/config_config.R")
 
+#' The base class for all TE classes.
+#' 
+#' @description This abstract class defines the basic structure of a TE class.
+#' This includes tid, data format, technology specifications, and dtype mapping.
+#' 
+#' @field tid The technology ID.
+#' @field tspecs The technology specifications.
+#' @field dataFormat The data format for every column.
+#' @field caseFields The case fields for every column.
+#' @field dtypeMapping The standard data type of each column.
 TEBase = R6Class("TEBase",
   private = list(
     tid = NULL,
@@ -25,21 +35,36 @@ TEBase = R6Class("TEBase",
   ),
 
   public = list(
+    #' @description
+    #' Create a TEBase object
+    #' @param tid The technology ID.
     initialize = function(tid = "") {
       private$tid <- tid
       private$tspecs <- techs[[private$tid]]
       private$dtypeMapping <- list(NULL)
       private$setDataFormat()
     },
+    #' @description
+    #' Get the data format.
+    #' @return A list of data format specifications.
     getDataFormat = function() {
       private$dataFormat
     },
+    #' @description
+    #' Get the default reference unit.
+    #' @return The default reference unit.
     refUnit = function() {
       flowTypes[self$refFlow()][["default_unit"]]
     },
+    #' @description
+    #' Get the reference flow.
+    #' @return The reference flow.
     refFlow = function() {
       private$tspecs[["reference_flow"]]
     },
+    #' @description
+    #' Get the default data type (data type mapping).
+    #' @return The default data type.
     getDtypeMapping = function() {
       if (is.null(private$dtypeMapping[[1]])) {
           private$dtypeMapping <- list()
