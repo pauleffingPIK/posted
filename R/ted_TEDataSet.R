@@ -36,9 +36,6 @@ TEDataSet <- R6::R6Class("TEDataSet",
         repUnits = NULL,
         #' @description
         #' Load the data files from the POSTED database. Check consistency if required.
-        #' @param load_other Other data files to load.
-        #' @param load_database Whether to load the default data file from the POSTED database.
-        #' @param check_incons Whether to check for inconsistencies in the data.
         #' @usage (NOT EXPORTED)
         loadFiles = function(load_other = list(), load_database, check_incons) {
             files <- list()

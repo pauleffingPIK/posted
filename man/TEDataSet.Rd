@@ -113,13 +113,7 @@ Create a TEDataSet object.
 
 \item{\code{load_other}}{Other data files to load.}
 
-\item{\code{load_other}}{Other data files to load.}
-
 \item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
-
-\item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
-
-\item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
 
 \item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
 
