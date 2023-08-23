@@ -3,9 +3,6 @@
 \name{TEDataSet}
 \alias{TEDataSet}
 \title{The class that implements a fully usable TE data set.}
-\usage{
-(NOT EXPORTED)
-}
 \description{
 This class implements a fully usable TE data set.
 It enables to generate aggregated tables to analize the underlying data.
@@ -42,9 +39,6 @@ elh2$data()
 \if{html}{\out{<a id="method-TEDataSet-new"></a>}}
 \if{latex}{\out{\hypertarget{method-TEDataSet-new}{}}}
 \subsection{Method \code{new()}}{
-Load the data files from the POSTED database. Check consistency if required.
-
-
 Create a TEDataSet object.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TEDataSet$new(
