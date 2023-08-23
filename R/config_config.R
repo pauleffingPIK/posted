@@ -1,4 +1,4 @@
-#source("R/config_read_config.R")
+source("R/config_read_config.R")
 
 #' The default units for some dimensions (e.g. time, currency).
 #' 

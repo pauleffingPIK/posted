@@ -1,7 +1,7 @@
 # library("R6")
 #' @importFrom R6 R6Class
 NULL
-# source("R/config_config.R")
+source("R/config_config.R")
 
 #' The base class for all TE classes.
 #' 

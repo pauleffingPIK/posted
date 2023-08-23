@@ -2,7 +2,7 @@
 
 #' @importFrom dplyr filter
 NULL
-#source("R/path.R")
+source("R/path.R")
 
 # since unit conversion does not work so nicely in R compared to pint in Python, we use the cached conversion factors
 # provided by Python.
