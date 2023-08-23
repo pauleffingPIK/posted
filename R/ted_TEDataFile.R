@@ -8,7 +8,7 @@ source("R/ted_TEBase.R")
 # @field path The path to the data file.
 # @field df The data frame.
 
-TEDataFile = R6Class("TEDataFile",
+TEDataFile = R6::R6Class("TEDataFile",
   inherit = TEBase,
   private = list(
       tid = NULL,

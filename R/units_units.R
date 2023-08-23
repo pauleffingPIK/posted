@@ -1,7 +1,5 @@
 #library(dplyr)
 
-#' @importFrom dplyr filter
-NULL
 source("R/path.R")
 
 # since unit conversion does not work so nicely in R compared to pint in Python, we use the cached conversion factors
@@ -22,12 +20,12 @@ convUnit <- function(unit_from, unit_to, flow_type=NULL) {
         return(1)
     }
     if (is.null(flow_type)) {
-        values <- filter(cachedUnits, from==unit_from & to==unit_to)
+        values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to)
     } else {
-        values <- filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
+        values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
         # if there was no match, try again without flow_type
         if (nrow(values) == 0) {
-            values <- filter(cachedUnits, from==unit_from & to==unit_to)
+            values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to)
         }
     }
 

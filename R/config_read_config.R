@@ -1,9 +1,6 @@
 #library(yaml)
 #library(data.table)
 
-#' @importFrom yaml read_yaml
-NULL
-
 source("R/path.R")
 
 #' Read a CSV data file.
@@ -31,7 +28,7 @@ readCSVDataFile <- function (fname) {
 readYAMLDataFile <- function (fname) {
     fpath <- pathOfDataFile(paste0(fname, ".yml"))
     fhandle <- file(fpath, "r", encoding="utf-8")
-    ret <- read_yaml(file=fhandle, fileEncoding="utf-8")
+    ret <- yaml::read_yaml(file=fhandle, fileEncoding="utf-8")
     close(fhandle)
     return(ret)
 }

@@ -1,6 +1,4 @@
 # library("R6")
-#' @importFrom R6 R6Class
-NULL
 source("R/config_config.R")
 
 #' The base class for all TE classes.
@@ -13,7 +11,7 @@ source("R/config_config.R")
 # @field dataFormat The data format for every column.
 # @field caseFields The case fields for every column.
 # @field dtypeMapping The standard data type of each column.
-TEBase = R6Class("TEBase",
+TEBase = R6::R6Class("TEBase",
   private = list(
     tid = NULL,
     tspecs = NULL,

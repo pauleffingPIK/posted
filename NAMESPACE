@@ -2,7 +2,3 @@
 
 export(TEDataSet)
 importFrom(R6,R6Class)
-importFrom(dplyr,filter)
-importFrom(magrittr,'%>%')
-importFrom(tibble,add_column)
-importFrom(yaml,read_yaml)
