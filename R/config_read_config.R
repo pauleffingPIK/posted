@@ -9,6 +9,7 @@ source("R/path.R")
 #' Read a CSV data file.
 #' 
 #' This function reads in a csv file specified by the relative file path.
+#' @importFrom yaml read_yaml
 #' @param fname The relative file path.
 #' @seealso Uses \link{pathOfDataFile}.
 # read CSV data file
