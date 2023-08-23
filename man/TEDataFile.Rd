@@ -9,28 +9,6 @@ This abstract class defines the basic structure of a TE data file class.
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataFile}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{path}}{The path to the data file.}
-
-\item{\code{df}}{The data frame.}
-}
-\if{html}{\out{</div>}}
-}
-\section{Active bindings}{
-\if{html}{\out{<div class="r6-active-bindings">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{path}}{The path to the data file.}
-
-\item{\code{df}}{The data frame.}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{

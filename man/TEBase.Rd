@@ -7,36 +7,6 @@
 This abstract class defines the basic structure of a TE class.
 This includes tid, data format, technology specifications, and dtype mapping.
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{tspecs}}{The technology specifications.}
-
-\item{\code{dataFormat}}{The data format for every column.}
-
-\item{\code{caseFields}}{The case fields for every column.}
-
-\item{\code{dtypeMapping}}{The standard data type of each column.}
-}
-\if{html}{\out{</div>}}
-}
-\section{Active bindings}{
-\if{html}{\out{<div class="r6-active-bindings">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{tspecs}}{The technology specifications.}
-
-\item{\code{dataFormat}}{The data format for every column.}
-
-\item{\code{caseFields}}{The case fields for every column.}
-
-\item{\code{dtypeMapping}}{The standard data type of each column.}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{

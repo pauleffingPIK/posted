@@ -12,3 +12,6 @@ readYAMLDataFile(fname)
 \description{
 This function reads in a yaml file specified by the relative file path (without the file extension).
 }
+\seealso{
+Uses \link{pathOfDataFile}.
+}

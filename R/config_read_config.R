@@ -1,5 +1,8 @@
-library(yaml)
-library(data.table)
+#library(yaml)
+#library(data.table)
+
+#' @importFrom yaml read_yaml
+NULL
 
 source("R/path.R")
 
@@ -7,7 +10,7 @@ source("R/path.R")
 #' 
 #' This function reads in a csv file specified by the relative file path.
 #' @param fname The relative file path.
-#' @seealso \link{pathOfDataFile}
+#' @seealso Uses \link{pathOfDataFile}.
 # read CSV data file
 readCSVDataFile <- function (fname) {
     fpath <- pathOfDataFile(fname)
@@ -23,6 +26,7 @@ readCSVDataFile <- function (fname) {
 #' 
 #' This function reads in a yaml file specified by the relative file path (without the file extension).
 #' @param fname The relative file path (without the file extension).
+#' @seealso Uses \link{pathOfDataFile}.
 # read YAML config file
 readYAMLDataFile <- function (fname) {
     fpath <- pathOfDataFile(paste0(fname, ".yml"))

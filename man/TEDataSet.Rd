@@ -14,44 +14,6 @@ elh2$data()
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataSet}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{load_other}}{Other data files to load.}
-
-\item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
-
-\item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
-
-\item{\code{df}}{The data frame.}
-
-\item{\code{refUnits}}{The reference units.}
-
-\item{\code{repUnits}}{The reported units.}
-}
-\if{html}{\out{</div>}}
-}
-\section{Active bindings}{
-\if{html}{\out{<div class="r6-active-bindings">}}
-\describe{
-\item{\code{tid}}{The technology ID.}
-
-\item{\code{load_other}}{Other data files to load.}
-
-\item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
-
-\item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
-
-\item{\code{df}}{The data frame.}
-
-\item{\code{refUnits}}{The reference units.}
-
-\item{\code{repUnits}}{The reported units.}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
