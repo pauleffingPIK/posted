@@ -7,7 +7,7 @@ source("R/path.R")
 #' 
 #' This function reads in a csv file specified by the relative file path.
 #' @param fname The relative file path.
-#' @seealso \link{pathOfDataFile()}
+#' @seealso \link{pathOfDataFile}
 # read CSV data file
 readCSVDataFile <- function (fname) {
     fpath <- pathOfDataFile(fname)
