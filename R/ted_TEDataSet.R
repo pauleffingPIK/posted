@@ -227,6 +227,7 @@ TEDataSet <- R6::R6Class("TEDataSet",
         #' @param load_other Other data files to load.
         #' @param load_database Whether to load the default data file from the POSTED database.
         #' @param check_incons Whether to check for inconsistencies in the data.
+        #' @seealso Uses \link{loadFiles} \link{checkTypes} \link{adjustUnits}.
         initialize = function(tid, data = NULL, load_other=list(), load_database=FALSE, check_incons=FALSE) {
             # initialise TEBase fields
             super$initialize(tid)

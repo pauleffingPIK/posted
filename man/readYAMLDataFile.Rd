@@ -4,7 +4,7 @@
 \alias{readYAMLDataFile}
 \title{Read a YAML data file.}
 \usage{
-readYAMLDataFile(fname)
+(NOT EXPORTED)
 }
 \arguments{
 \item{fname}{The relative file path (without the file extension).}

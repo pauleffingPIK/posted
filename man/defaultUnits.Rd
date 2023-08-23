@@ -8,9 +8,12 @@
 An object of class \code{list} of length 2.
 }
 \usage{
-defaultUnits
+(NOT EXPORTED)
 }
 \description{
 The default units for some dimensions (e.g. time, currency).
+}
+\seealso{
+Uses \link{readYAMLDataFile}.
 }
 \keyword{datasets}

@@ -4,7 +4,7 @@
 \alias{pathOfOutputFile}
 \title{Path of an output file}
 \usage{
-pathOfOutputFile(fname)
+(NOT EXPORTED)
 }
 \arguments{
 \item{fname}{The file name.}

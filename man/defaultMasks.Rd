@@ -8,9 +8,12 @@
 An object of class \code{list} of length 1.
 }
 \usage{
-defaultMasks
+(NOT EXPORTED)
 }
 \description{
 Default masks that are applied to the flow types.
+}
+\seealso{
+Uses \link{readYAMLDataFile}.
 }
 \keyword{datasets}

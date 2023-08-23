@@ -4,7 +4,7 @@
 \alias{pathOfFile}
 \title{Path of a file in a given directory}
 \usage{
-pathOfFile(dname, fname)
+(NOT EXPORTED)
 }
 \arguments{
 \item{dname}{The directory name.}

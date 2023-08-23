@@ -3,9 +3,15 @@
 \name{TEBase}
 \alias{TEBase}
 \title{The base class for all TE classes.}
+\usage{
+(NOT EXPORTED)
+}
 \description{
 This abstract class defines the basic structure of a TE class.
 This includes tid, data format, technology specifications, and dtype mapping.
+}
+\seealso{
+Uses \link{flowTypes}.
 }
 \section{Methods}{
 \subsection{Public methods}{

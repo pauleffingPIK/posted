@@ -5,6 +5,7 @@ source("R/config_config.R")
 #' 
 #' @description This abstract class defines the basic structure of a TE class.
 #' This includes tid, data format, technology specifications, and dtype mapping.
+#' @usage (NOT EXPORTED)
 #' 
 # @field tid The technology ID.
 # @field tspecs The technology specifications.
@@ -53,6 +54,7 @@ TEBase = R6::R6Class("TEBase",
     #' @description
     #' Get the default reference unit.
     #' @return The default reference unit.
+    #' @seealso Uses \link{flowTypes}.
     refUnit = function() {
       flowTypes[self$refFlow()][["default_unit"]]
     },

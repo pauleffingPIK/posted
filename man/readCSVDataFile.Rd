@@ -4,7 +4,7 @@
 \alias{readCSVDataFile}
 \title{Read a CSV data file.}
 \usage{
-readCSVDataFile(fname)
+(NOT EXPORTED)
 }
 \arguments{
 \item{fname}{The relative file path.}

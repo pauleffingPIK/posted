@@ -4,7 +4,7 @@
 \alias{pathOfDataFile}
 \title{Path of a data file}
 \usage{
-pathOfDataFile(fname)
+(NOT EXPORTED)
 }
 \arguments{
 \item{fname}{The file name.}

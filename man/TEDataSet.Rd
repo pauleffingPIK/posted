@@ -11,6 +11,9 @@ It enables to generate aggregated tables to analize the underlying data.
 elh2 <- TEDataSet$new("elh2")
 elh2$data()
 }
+\seealso{
+Uses \link{loadFiles} \link{checkTypes} \link{adjustUnits}.
+}
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataSet}
 }

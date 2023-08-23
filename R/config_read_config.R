@@ -6,6 +6,7 @@ source("R/path.R")
 #' Read a CSV data file.
 #' 
 #' This function reads in a csv file specified by the relative file path.
+#' @usage (NOT EXPORTED)
 #' @param fname The relative file path.
 #' @seealso Uses \link{pathOfDataFile}.
 # read CSV data file
@@ -22,6 +23,7 @@ readCSVDataFile <- function (fname) {
 #' Read a YAML data file.
 #' 
 #' This function reads in a yaml file specified by the relative file path (without the file extension).
+#' @usage (NOT EXPORTED)
 #' @param fname The relative file path (without the file extension).
 #' @seealso Uses \link{pathOfDataFile}.
 # read YAML config file

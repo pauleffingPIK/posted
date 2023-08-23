@@ -4,7 +4,7 @@
 \alias{pathOfTEDFile}
 \title{Path of a TED file}
 \usage{
-pathOfTEDFile(tid)
+(NOT EXPORTED)
 }
 \arguments{
 \item{tid}{The technology ID.}

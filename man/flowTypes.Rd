@@ -8,9 +8,12 @@
 An object of class \code{list} of length 26.
 }
 \usage{
-flowTypes
+(NOT EXPORTED)
 }
 \description{
 Flow type information (e.g. default unit, energy content, density).
+}
+\seealso{
+Uses \link{readCSVDataFile}.
 }
 \keyword{datasets}

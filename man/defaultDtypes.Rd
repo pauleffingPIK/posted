@@ -9,7 +9,7 @@
 An object of class \code{list} of length 13.
 }
 \usage{
-mapColnamesDtypes
+(NOT EXPORTED)
 }
 \description{
 Default data type for each entry type.

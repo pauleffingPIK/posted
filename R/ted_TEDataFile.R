@@ -3,6 +3,7 @@ source("R/ted_TEBase.R")
 #' The base class for all TE data file classes.
 #' 
 #' @description This abstract class defines the basic structure of a TE data file class.
+#' @usage (NOT EXPORTED)
 #' 
 # @field tid The technology ID.
 # @field path The path to the data file.
@@ -34,6 +35,7 @@ TEDataFile = R6::R6Class("TEDataFile",
     },
     #' @description
     #' Checks if the data has been read in, if not reads the data.
+    #' @seealso Uses \link{read}.
     load = function() {
       if (identical(private$df,data.frame(NULL))) {
         self$read()
@@ -44,6 +46,7 @@ TEDataFile = R6::R6Class("TEDataFile",
     #' Reads the data from the data file.
     #' Checks if the data file contains no unknown columns.
     #' Inserts missing columns, reorders via reindexing and updates dtypes.
+    #' @seealso Uses \link{getDtypeMapping}.
     read = function() {
       # read CSV file
       print(sprintf("Reading file \"%s\"...", private$path))
@@ -110,6 +113,7 @@ TEDataFile = R6::R6Class("TEDataFile",
     #' @description
     #' Check the data for inconsistencies.
     #' @param re If TRUE, inconsistencies are checked.
+    #' @seealso Uses \link{checkRow}.
     check = function(re = TRUE) {
       private$inconsistencies <- list()
 

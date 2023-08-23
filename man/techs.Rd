@@ -8,9 +8,12 @@
 An object of class \code{list} of length 19.
 }
 \usage{
-techs
+(NOT EXPORTED)
 }
 \description{
 Technology specifications (e.g. name, desc, sector, case_fields, ...).
+}
+\seealso{
+Uses \link{readYAMLDataFile}.
 }
 \keyword{datasets}

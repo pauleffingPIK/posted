@@ -8,9 +8,12 @@
 An object of class \code{list} of length 13.
 }
 \usage{
-baseFormat
+(NOT EXPORTED)
 }
 \description{
 Entry type specifications and their default data types.
+}
+\seealso{
+Uses \link{readYAMLDataFile}.
 }
 \keyword{datasets}
