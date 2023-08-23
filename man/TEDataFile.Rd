@@ -9,13 +9,6 @@
 \description{
 This abstract class defines the basic structure of a TE data file class.
 }
-\seealso{
-Uses \link{read}.
-
-Uses \link{getDtypeMapping}.
-
-Uses \link{checkRow}.
-}
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataFile}
 }

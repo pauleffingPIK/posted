@@ -3,6 +3,23 @@
 \name{TEDataSet}
 \alias{TEDataSet}
 \title{The class that implements a fully usable TE data set.}
+\usage{
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+
+(NOT EXPORTED)
+}
 \description{
 This class implements a fully usable TE data set.
 It enables to generate aggregated tables to analize the underlying data.
@@ -10,9 +27,6 @@ It enables to generate aggregated tables to analize the underlying data.
 \examples{
 elh2 <- TEDataSet$new("elh2")
 elh2$data()
-}
-\seealso{
-Uses \link{loadFiles} \link{checkTypes} \link{adjustUnits}.
 }
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataSet}
@@ -42,6 +56,43 @@ Uses \link{loadFiles} \link{checkTypes} \link{adjustUnits}.
 \if{html}{\out{<a id="method-TEDataSet-new"></a>}}
 \if{latex}{\out{\hypertarget{method-TEDataSet-new}{}}}
 \subsection{Method \code{new()}}{
+Load the data files from the POSTED database. Check consistency if required.
+
+
+Check that the entry type and flow type are valid.
+Filter out invalid entries.
+
+
+Set default reference and reported units and normalise.
+
+
+Set default reference units for all entry types.
+Create mapping from default reference dimension to default reference unit where possible.
+Apply mapping to all entry types.
+Override with default reference unit if given.
+
+
+Normalise reference units of all entries.
+Calculate conversion factor from current reference unit to default reference unit.
+Apply conversion factor to all entries.
+Set converted value, uncertainty and unit.
+
+
+Set default reported units for all entry types.
+Create mapping from default reported dimension to default reported unit where possible.
+Apply mapping to all entry type and assign a tuple of type, flow type and unit
+
+
+Normalise reported units of all entries.
+Calculate conversion factor from current reported unit to default reported unit.
+This is done by joining with the default reported unit for the type and flow type.
+Apply conversion factor to all entries.
+Set converted value, uncertainty and unit.
+
+
+Convert values to defined units.
+
+
 Create a TEDataSet object.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TEDataSet$new(
@@ -62,9 +113,19 @@ Create a TEDataSet object.
 
 \item{\code{load_other}}{Other data files to load.}
 
+\item{\code{load_other}}{Other data files to load.}
+
+\item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
+
 \item{\code{load_database}}{Whether to load the default data file from the POSTED database.}
 
 \item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
+
+\item{\code{check_incons}}{Whether to check for inconsistencies in the data.}
+
+\item{\code{type_units}}{A list of units for entry types that are not of type flow.}
+
+\item{\code{flow_units}}{A list of units for entry types that are of type flow.}
 }
 \if{html}{\out{</div>}}
 }

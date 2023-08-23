@@ -10,9 +10,6 @@
 This abstract class defines the basic structure of a TE class.
 This includes tid, data format, technology specifications, and dtype mapping.
 }
-\seealso{
-Uses \link{flowTypes}.
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{

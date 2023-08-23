@@ -53,7 +53,6 @@ TEBase = R6::R6Class("TEBase",
     },
     #' @description
     #' Get the default reference unit.
-    #' @seealso Uses \link{flowTypes}.
     #' @return The default reference unit.
     refUnit = function() {
       flowTypes[self$refFlow()][["default_unit"]]
