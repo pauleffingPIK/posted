@@ -13,5 +13,5 @@ readCSVDataFile(fname)
 This function reads in a csv file specified by the relative file path.
 }
 \seealso{
-\link{pathOfDataFile()}
+\link{pathOfDataFile}
 }
