@@ -1,3 +1,5 @@
+library(magrittr)
+
 source("R/ted_TEBase.R")
 
 #' The base class for all TE data file classes.

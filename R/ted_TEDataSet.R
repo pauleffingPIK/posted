@@ -74,10 +74,9 @@ TEDataSet <- R6::R6Class("TEDataSet",
 
             # compile dataset from the dataframes loaded from the individual files
             private$df <- do.call(rbind, lapply(files, function(f) f$data()))
-        #' @description
-        #' Check that the entry type and flow type are valid.
-        #' Filter out invalid entries.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Check that the entry type and flow type are valid.
+        # Filter out invalid entries.
         },
         checkTypes = function() {
             cond <- private$df$type %in% names(private$tspecs$entry_types) &
@@ -86,9 +85,8 @@ TEDataSet <- R6::R6Class("TEDataSet",
             private$df <- private$df[cond,]
             rownames(private$df) <- NULL
         },
-        #' @description
-        #' Set default reference and reported units and normalise.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Set default reference and reported units and normalise.
         adjustUnits = function() {
             # set default reference units for all entry types
             private$setRefUnitsDef()
@@ -99,12 +97,11 @@ TEDataSet <- R6::R6Class("TEDataSet",
             # normalise reported units of all entries
             private$normRepUnits()
         },
-        #' @description
-        #' Set default reference units for all entry types.
-        #' Create mapping from default reference dimension to default reference unit where possible.
-        #' Apply mapping to all entry types.
-        #' Override with default reference unit if given.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Set default reference units for all entry types.
+        # Create mapping from default reference dimension to default reference unit where possible.
+        # Apply mapping to all entry types.
+        # Override with default reference unit if given.
         setRefUnitsDef = function() {
             private$refUnits <- list()
             for (typeid in names(private$tspecs$entry_types)) {
@@ -134,12 +131,11 @@ TEDataSet <- R6::R6Class("TEDataSet",
                 #private$refUnits <- c(private$refUnits, private$tspecs[["default-ref-units"]])
             }
         },
-        #' @description
-        #' Normalise reference units of all entries.
-        #' Calculate conversion factor from current reference unit to default reference unit.
-        #' Apply conversion factor to all entries.
-        #' Set converted value, uncertainty and unit.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Normalise reference units of all entries.
+        # Calculate conversion factor from current reference unit to default reference unit.
+        # Apply conversion factor to all entries.
+        # Set converted value, uncertainty and unit.
         normRefUnits = function() {
             # default reference value is 1.0
             private$df$reference_value[is.na(private$df$reference_value)] <- 1.0
@@ -159,11 +155,10 @@ TEDataSet <- R6::R6Class("TEDataSet",
             # drop old unit and value columns
             private$df <- private$df[, -grep("^(reported|reference)_(value|unc|unit).*$", colnames(private$df))]
         },
-        #' @description
-        #' Set default reported units for all entry types.
-        #' Create mapping from default reported dimension to default reported unit where possible.
-        #' Apply mapping to all entry type and assign a tuple of type, flow type and unit
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Set default reported units for all entry types.
+        # Create mapping from default reported dimension to default reported unit where possible.
+        # Apply mapping to all entry type and assign a tuple of type, flow type and unit
         setRepUnitsDef = function() {
             types <- unique(c(names(private$tspecs$entry_types), 'fopex', 'fopex_spec'))
             private$repUnits <- list()
@@ -186,13 +181,12 @@ TEDataSet <- R6::R6Class("TEDataSet",
                 }
             }
         },
-        #' @description
-        #' Normalise reported units of all entries.
-        #' Calculate conversion factor from current reported unit to default reported unit.
-        #' This is done by joining with the default reported unit for the type and flow type.
-        #' Apply conversion factor to all entries.
-        #' Set converted value, uncertainty and unit.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Normalise reported units of all entries.
+        # Calculate conversion factor from current reported unit to default reported unit.
+        # This is done by joining with the default reported unit for the type and flow type.
+        # Apply conversion factor to all entries.
+        # Set converted value, uncertainty and unit.
         normRepUnits = function() {
 
             dfRepUnitsList <- list()
@@ -233,11 +227,10 @@ TEDataSet <- R6::R6Class("TEDataSet",
             private$df$unit <- private$df$unit_convert
             private$df <- private$df[, !grepl('unit_convert', colnames(private$df))]
         },
-        #' @description
-        #' Convert values to defined units.
-        #' @param type_units A list of units for entry types that are not of type flow.
-        #' @param flow_units A list of units for entry types that are of type flow.
-        #' @usage (NOT EXPORTED)
+        # Description
+        # Convert values to defined units.
+        # @param type_units A list of units for entry types that are not of type flow.
+        # @param flow_units A list of units for entry types that are of type flow.
         convertUnits = function(type_units = NULL, flow_units = NULL) {
             # raise exception if no updates to units are provided
             if (is.null(type_units) && is.null(flow_units)) {
