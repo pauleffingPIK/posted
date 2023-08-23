@@ -18,15 +18,23 @@ convUnit <- function(unit_from, unit_to, flow_type=NULL) {
         return(1)
     }
     if (is.null(flow_type)) {
-        values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to)
+        values <- filter(cachedUnits, from==unit_from & to==unit_to)
     } else {
-        values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
+        values <- filter(cachedUnits, from==unit_from & to==unit_to & ft==flow_type)
         # if there was no match, try again without flow_type
         if (nrow(values) == 0) {
-            values <- dplyr::filter(cachedUnits, from==unit_from & to==unit_to)
+            values <- filter(cachedUnits, from==unit_from & to==unit_to)
+        }
+        # if there was no match at all, report a warning
+        if (nrow(values) == 0) {
+            if (is.na(flow_type)) {
+                warning(sprintf("No conversion factor found for unit '%s' to '%s'.", unit_from, unit_to))
+            } else {
+                warning(sprintf("No conversion factor found for unit '%s' to '%s' and flow type '%s'.", unit_from, unit_to, flow_type))
+            }
+            return(NA)
         }
     }
-
     return(values$factor[1])
 }
 
