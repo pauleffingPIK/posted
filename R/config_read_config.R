@@ -1,6 +1,3 @@
-#library(yaml)
-#library(data.table)
-
 source("R/path.R")
 
 #' Read a CSV data file.

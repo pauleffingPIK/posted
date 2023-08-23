@@ -1,4 +1,3 @@
-# library("R6")
 source("R/config_config.R")
 
 #' The base class for all TE classes.
