@@ -19,6 +19,10 @@ source("R/units_units.R")
 #' @field df The data frame.
 #' @field refUnits The reference units.
 #' @field repUnits The reported units.
+#' 
+#' @examples
+#' elh2 <- TEDataSet$new("elh2")
+#' elh2$data()
 #' @export TEDataSet
 TEDataSet <- R6Class("TEDataSet",
     inherit = TEBase,

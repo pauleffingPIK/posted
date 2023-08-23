@@ -7,6 +7,10 @@
 This class implements a fully usable TE data set.
 It enables to generate aggregated tables to analize the underlying data.
 }
+\examples{
+elh2 <- TEDataSet$new("elh2")
+elh2$data()
+}
 \section{Super class}{
 \code{\link[posted:TEBase]{posted::TEBase}} -> \code{TEDataSet}
 }

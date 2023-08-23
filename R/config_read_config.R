@@ -3,7 +3,11 @@ library(data.table)
 
 source("R/path.R")
 
-
+#' Read a CSV data file.
+#' 
+#' This function reads in a csv file specified by the relative file path.
+#' @param fname The relative file path.
+#' @seealso \link{pathOfDataFile()}
 # read CSV data file
 readCSVDataFile <- function (fname) {
     fpath <- pathOfDataFile(fname)
@@ -15,7 +19,10 @@ readCSVDataFile <- function (fname) {
     ))
 }
 
-
+#' Read a YAML data file.
+#' 
+#' This function reads in a yaml file specified by the relative file path (without the file extension).
+#' @param fname The relative file path (without the file extension).
 # read YAML config file
 readYAMLDataFile <- function (fname) {
     fpath <- pathOfDataFile(paste0(fname, ".yml"))
