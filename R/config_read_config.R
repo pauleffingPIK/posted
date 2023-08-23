@@ -2,7 +2,7 @@
 #library(data.table)
 
 #' @importFrom yaml read_yaml
-
+#' @export
 NULL
 
 source("R/path.R")
