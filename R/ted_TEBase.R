@@ -5,12 +5,6 @@ source("R/config_config.R")
 #' @description This abstract class defines the basic structure of a TE class.
 #' This includes tid, data format, technology specifications, and dtype mapping.
 #' @usage (NOT EXPORTED)
-#' 
-# @field tid The technology ID.
-# @field tspecs The technology specifications.
-# @field dataFormat The data format for every column.
-# @field caseFields The case fields for every column.
-# @field dtypeMapping The standard data type of each column.
 TEBase = R6::R6Class("TEBase",
   private = list(
     tid = NULL,

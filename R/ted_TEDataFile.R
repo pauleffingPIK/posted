@@ -6,11 +6,6 @@ source("R/ted_TEBase.R")
 #' 
 #' @description This abstract class defines the basic structure of a TE data file class.
 #' @usage (NOT EXPORTED)
-#' 
-# @field tid The technology ID.
-# @field path The path to the data file.
-# @field df The data frame.
-
 TEDataFile = R6::R6Class("TEDataFile",
   inherit = TEBase,
   private = list(

@@ -9,15 +9,6 @@ source("R/ted_TEDataFile.R")
 #' 
 #' @description This class implements a fully usable TE data set.
 #' It enables to generate aggregated tables to analize the underlying data.
-#' 
-# @field tid The technology ID.
-# @field load_other Other data files to load.
-# @field load_database Whether to load the default data file from the POSTED database.
-# @field check_incons Whether to check for inconsistencies in the data.
-# @field df The data frame.
-# @field refUnits The reference units.
-# @field repUnits The reported units.
-#' 
 #' @examples
 #' elh2 <- TEDataSet$new("elh2")
 #' elh2$data()
