@@ -9,5 +9,5 @@ License: `use_gpl3_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: dplyr, magrittr, tibble, yaml
+Imports: dplyr, magrittr, tibble, yaml, R6
 URL: https://github.com/PhilippVerpoort/posted/
